@@ -1,12 +1,17 @@
+import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
+import HomeStackNavigator from './src/navigation/Navigation';
+import BottomNav from './src/navigation/BottomNav';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    
+    <NavigationContainer independent={true}>
+      <HomeStackNavigator  /> 
+    </NavigationContainer>
+    
+    
   );
 }
 
